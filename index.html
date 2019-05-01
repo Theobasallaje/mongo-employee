@@ -3,15 +3,31 @@
 <head>
     <title>HW3</title>
     <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="text-align: center">
     <h1>Mongo Project</h1>
-    <div id="1">
+    <div class="card">
+        <h5 class="card-header">Oldest Male</h5>
+        <div class="card-body">
+            <a id="showJSON" href="#" class="btn btn-primary">Retrieve Data</a>
+            <br/><br/>
+            <h5 class="card-title">Name</h5>
+            <p id="oldestMale" class="card-text"></p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">JSON</h5>
+            <p id="oldestMalejson" class="card-text"></p>
+            <!-- <a href="#" class="btn btn-primary">Get JSON</a> -->
+        </div>
+    </div>
+    <!-- <div id="1">
         <h3><strong>Oldest Male JSON:</strong> <span id="oldestMalejson"></span></h3>
         <h3><strong>Oldest Male:</strong> <span id="oldestMale"></span></h3>
-    </div>
-    <button id="showJSON" type="button">Click Me for Info!</button>
+    </div> -->
+    <!-- <button id="showJSON" type="button">Click Me for Info!</button> -->
 
     <script type="text/javascript">
         $("#showJSON").on("click", function () {

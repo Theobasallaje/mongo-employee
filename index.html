@@ -12,7 +12,7 @@
     <div class="card">
         <h5 class="card-header">Oldest Male</h5>
         <div class="card-body">
-            <a id="showJSON" href="#" class="btn btn-primary">Retrieve Data</a>
+            <a id="showOldestMale" href="#" class="btn btn-primary">Retrieve Data</a>
             <br/><br/>
             <h5 class="card-title">Name</h5>
             <p id="oldestMale" class="card-text"></p>
@@ -20,17 +20,67 @@
         <div class="card-body">
             <h5 class="card-title">JSON</h5>
             <p id="oldestMalejson" class="card-text"></p>
-            <!-- <a href="#" class="btn btn-primary">Get JSON</a> -->
         </div>
     </div>
-    <!-- <div id="1">
-        <h3><strong>Oldest Male JSON:</strong> <span id="oldestMalejson"></span></h3>
-        <h3><strong>Oldest Male:</strong> <span id="oldestMale"></span></h3>
-    </div> -->
-    <!-- <button id="showJSON" type="button">Click Me for Info!</button> -->
+
+    <div class="card">
+        <h5 class="card-header">Number of Employees in Each Department</h5>
+        <div class="card-body">
+            <a id="showOldestMale" href="#" class="btn btn-primary">Retrieve Data</a>
+            <br/><br/>
+            <h5 class="card-title">Name</h5>
+            <p id="oldestMale" class="card-text"></p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">JSON</h5>
+            <p id="oldestMalejson" class="card-text"></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h5 class="card-header">Department Manager by Gender</h5>
+        <div class="card-body">
+            <a id="showOldestMale" href="#" class="btn btn-primary">Retrieve Data</a>
+            <br/><br/>
+            <h5 class="card-title">Name</h5>
+            <p id="oldestMale" class="card-text"></p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">JSON</h5>
+            <p id="oldestMalejson" class="card-text"></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h5 class="card-header">Highest Paid Employee (Male and Female)</h5>
+        <div class="card-body">
+            <a id="showOldestMale" href="#" class="btn btn-primary">Retrieve Data</a>
+            <br/><br/>
+            <h5 class="card-title">Name</h5>
+            <p id="oldestMale" class="card-text"></p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">JSON</h5>
+            <p id="oldestMalejson" class="card-text"></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h5 class="card-header">Average Duration of each title</h5>
+        <div class="card-body">
+            <a id="showOldestMale" href="#" class="btn btn-primary">Retrieve Data</a>
+            <br/><br/>
+            <h5 class="card-title">Name</h5>
+            <p id="oldestMale" class="card-text"></p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">JSON</h5>
+            <p id="oldestMalejson" class="card-text"></p>
+        </div>
+    </div>
 
     <script type="text/javascript">
-        $("#showJSON").on("click", function () {
+        $("#showOldestMale").on("click", function () {
             $.get("/oldestMale", function (data) {
                 console.log(data[0]);
                 $("#1").show();
@@ -38,6 +88,43 @@
                 $("#oldestMale").text(data[0].first_name + " " + data[0].last_name);
             });
         });
+
+        $("#numEmployees").on("click", function () {
+            $.get("/oldestMale", function (data) {
+                console.log(data[0]);
+                $("#1").show();
+                $("#oldestMalejson").text(JSON.stringify(data));
+                $("#oldestMale").text(data[0].first_name + " " + data[0].last_name);
+            });
+        });
+
+        $("#managerGender").on("click", function () {
+            $.get("/oldestMale", function (data) {
+                console.log(data[0]);
+                $("#1").show();
+                $("#oldestMalejson").text(JSON.stringify(data));
+                $("#oldestMale").text(data[0].first_name + " " + data[0].last_name);
+            });
+        });
+
+        $("#highPaid").on("click", function () {
+            $.get("/oldestMale", function (data) {
+                console.log(data[0]);
+                $("#1").show();
+                $("#oldestMalejson").text(JSON.stringify(data));
+                $("#oldestMale").text(data[0].first_name + " " + data[0].last_name);
+            });
+        });
+
+        $("#empDuration").on("click", function () {
+            $.get("/oldestMale", function (data) {
+                console.log(data[0]);
+                $("#1").show();
+                $("#oldestMalejson").text(JSON.stringify(data));
+                $("#oldestMale").text(data[0].first_name + " " + data[0].last_name);
+            });
+        });
+
     </script>
 
 </body>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+    <title>HW3</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+    <h1>Basic Routing with Express</h1>
+    <div id="1">
+        <h3><strong>Stringified JSON:</strong> <span id="json"></span></h3>
+    </div>
+    <button id="showJSON" type="button">Click Me for Info!</button>
+
+    <script type="text/javascript">
+        $("#showJSON").on("click", function () {
+            $.get("/json", function (data) {
+                console.log(data);
+                $("#1").show();
+                $("#json").text(JSON.stringify(data));
+            });
+        });
+    </script>
+
+</body>
+
+</html>

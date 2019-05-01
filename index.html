@@ -6,18 +6,20 @@
 </head>
 
 <body>
-    <h1>Basic Routing with Express</h1>
+    <h1>Mongo Project</h1>
     <div id="1">
-        <h3><strong>Stringified JSON:</strong> <span id="json"></span></h3>
+        <h3><strong>Oldest Male JSON:</strong> <span id="oldestMalejson"></span></h3>
+        <h3><strong>Oldest Male:</strong> <span id="oldestMale"></span></h3>
     </div>
     <button id="showJSON" type="button">Click Me for Info!</button>
 
     <script type="text/javascript">
         $("#showJSON").on("click", function () {
             $.get("/oldestMale", function (data) {
-                console.log(data);
+                console.log(data[0]);
                 $("#1").show();
-                $("#json").text(data);
+                $("#oldestMalejson").text(JSON.stringify(data));
+                $("#oldestMale").text(data[0].first_name + " " + data[0].last_name);
             });
         });
     </script>

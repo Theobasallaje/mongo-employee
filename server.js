@@ -19,7 +19,7 @@ app.get('/oldestMale', function (req, res) {
     } else {
       const db = client.db('heroku_66bgzx9f"');
       const collection = db.collection('employees');
-      var result = collection.find({ "gender": "M"  }).sort({"birth_date" : 1}).limit(1) .pretty() 
+      var result = collection.find({ "gender": "M"  }).sort({"birth_date" : 1}).limit(1).pretty(); 
       return res.json(result);
     }
     //...

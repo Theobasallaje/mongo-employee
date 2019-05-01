@@ -14,10 +14,10 @@
 
     <script type="text/javascript">
         $("#showJSON").on("click", function () {
-            $.get("/json", function (data) {
+            $.get("/oldestMale", function (data) {
                 console.log(data);
                 $("#1").show();
-                $("#json").text(JSON.stringify(data));
+                $("#json").text(data);
             });
         });
     </script>
